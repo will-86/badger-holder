@@ -3,8 +3,8 @@ $fa = 1;
 $fs = 0.4;
 
 // Dimensions: Badger
-widthBadger = 86;
-heightBadger = 49;
+widthBadger = 85.25;
+heightBadger = 48.5;
 
 // Dimensions: Fixings
 radiusHole = 3 / 2;
