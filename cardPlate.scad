@@ -12,20 +12,19 @@ radiusHole = 1.5;
 
 // Dimensions: ID Card
 widthCard = 86;
-heightCard = 54;
-depthCard = 1;
+heightCard = 55;
+depthCard = 1.25;
 
 // Dimensions: Fixings
 lengthScrew = 3;
 lengthNut = 1;
-radiusNut = 2;
+radiusNut = 2.1;
 
 // Dimensions: General
 radiusPlate = 1;
-heightWall = 2;
+heightWall = 3;
 bufferPlate = 2;
-depthWall = 2;
-overhangWall = 2;
+overhangWall = 3;
 
 // Module: Hull
 module hull_cyl() {
