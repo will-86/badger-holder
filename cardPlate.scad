@@ -43,6 +43,7 @@ module hull_nut() {
 // Model
 render() {
     difference() {
+        // Main Plate Body
         hull(){
             translate([radiusPlate, radiusPlate, 0]) {
                 hull_cyl();
@@ -61,32 +62,39 @@ render() {
             }
         }
 
+        // Subtract hole for screw/nut - bottom-left
         translate([bufferPlate + offsetHole + radiusHole, bufferPlate + ((heightCard - heightBadger) / 2) + offsetHole + radiusHole, lengthScrew - lengthNut]) {
             hull_nut();
         }
 
+        // Subtract hole for screw/nut - bottom-right
         translate([bufferPlate + widthBadger - (offsetHole + radiusHole), bufferPlate + ((heightCard - heightBadger) / 2) + offsetHole + radiusHole, lengthScrew - lengthNut]) {
             hull_nut();
         }
 
+        // Subtract hole for screw/nut - top-left
         translate([bufferPlate + offsetHole + radiusHole, bufferPlate + heightBadger + ((heightCard - heightBadger) / 2) - (offsetHole + radiusHole), lengthScrew - lengthNut]) {
             hull_nut();
         }
 
+        // Subtract hole for screw/nut - top-right
         translate([bufferPlate + widthBadger - (offsetHole + radiusHole), bufferPlate + heightBadger + ((heightCard - heightBadger) / 2) - (offsetHole + radiusHole), lengthScrew - lengthNut]) {
             hull_nut();
         }
 
+        // Subtract space for the card to sit in
         translate([bufferPlate, bufferPlate, lengthScrew]) {
             cube([widthCard + bufferPlate, heightCard, depthCard]);
         }
 
+        // Subtract space for card to be visible through
         translate([bufferPlate + overhangWall, bufferPlate + overhangWall, lengthScrew + depthCard]) {
             cube([widthCard - overhangWall, heightCard - (2 * overhangWall), heightWall - depthCard]);
         }
 
+        // Subtract right-hand portion of view fram to allow for card removal
         translate([bufferPlate + widthCard, bufferPlate + overhangWall, lengthScrew + depthCard]) {
-            cube([bufferPlate, heightCard - (bufferPlate + overhangWall), heightWall - depthCard]);
+            cube([bufferPlate, heightCard - (2 * overhangWall), heightWall - depthCard]);
         }
     }
 }
