@@ -18,13 +18,13 @@ depthCard = 1.25;
 // Dimensions: Fixings
 lengthScrew = 3;
 lengthNut = 1;
-radiusNut = 2.1;
+radiusNut = 2.2;
 
 // Dimensions: General
 radiusPlate = 1;
-heightWall = 3;
+heightWall = 2;
 bufferPlate = 2;
-overhangWall = 3;
+overhangWall = 2;
 
 // Module: Hull
 module hull_cyl() {
