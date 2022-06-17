@@ -42,16 +42,32 @@ render() {
         }
         
         // Subtract Holes for the screw threads
-        translate([offsetHole + radiusHole, offsetHole + radiusHole, 0])
+        translate([
+            offsetHole + radiusHole, 
+            offsetHole + radiusHole, 
+            0
+        ])
             cylinder(r=radiusHole, h=depthPlate);
 
-        translate([widthBadger - (offsetHole + radiusHole), offsetHole + radiusHole, 0])
+        translate([
+            widthBadger - (offsetHole + radiusHole), 
+            offsetHole + radiusHole, 
+            0
+        ])
             cylinder(r=radiusHole, h=depthPlate);
 
-        translate([offsetHole + radiusHole, heightBadger - (offsetHole + radiusHole), 0])
+        translate([
+            offsetHole + radiusHole, 
+            heightBadger - (offsetHole + radiusHole), 
+            0
+        ])
             cylinder(r=radiusHole, h=depthPlate);
 
-        translate([widthBadger - (offsetHole + radiusHole), heightBadger - (offsetHole + radiusHole), 0])
+        translate([
+            widthBadger - (offsetHole + radiusHole), 
+            heightBadger - (offsetHole + radiusHole), 
+            0
+        ])
             cylinder(r=radiusHole, h=depthPlate);
 
     }
